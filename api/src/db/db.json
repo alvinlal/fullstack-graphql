@@ -1,26 +1,40 @@
 {
-    "user": {
-        "id": "jBWMVGjm50l6LGwepDoty",
-        "username": "frontendmaster"
+  "user": {
+    "id": "jBWMVGjm50l6LGwepDoty",
+    "username": "frontendmaster"
+  },
+  "pet": [
+    {
+      "id": "343h3343",
+      "type": "DOG",
+      "name": "Karma",
+      " createdAt": "343jh43j4kk"
     },
-    "pet": [
-        {
-            "id": "343h3343",
-            "type": "DOG",
-            "name": "Karma",
-            " createdAt": "343jh43j4kk"
-        },
-        {
-            "id": "dsfd43h3",
-            "type": "CAT",
-            "name": "Moose",
-            " createdAt": "h3kj5h34"
-        },
-        {
-            "id": "sdf3434",
-            "type": "CAT",
-            "name": "Goldeye",
-            " createdAt": "dfsfdsf67f"
-        }
-    ]
+    {
+      "id": "dsfd43h3",
+      "type": "CAT",
+      "name": "Moose",
+      " createdAt": "h3kj5h34"
+    },
+    {
+      "id": "sdf3434",
+      "type": "CAT",
+      "name": "Goldeye",
+      " createdAt": "dfsfdsf67f"
+    },
+    {
+      "id": "rHu4dMfgKTTYZ6gg08gx2",
+      "createdAt": 1594751343450,
+      "name": "Appu",
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    },
+    {
+      "id": "Sl85DLa26bdZU5twFhr7C",
+      "createdAt": 1594752443705,
+      "name": "cockoo",
+      "type": "DOG",
+      "user": "jBWMVGjm50l6LGwepDoty"
+    }
+  ]
 }
