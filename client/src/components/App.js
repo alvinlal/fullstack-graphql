@@ -1,17 +1,18 @@
-import { Switch, Route } from 'react-router-dom'
-import React, {Fragment} from 'react'
-import Header from './Header'
-import Pets from '../pages/Pets'
+import { Switch, Route } from 'react-router-dom';
+import React, { Fragment } from 'react';
+import Header from './Header';
+import Pets from '../pages/Pets';
+import client from '../client';
 
 const App = () => (
   <Fragment>
     <Header />
     <div>
       <Switch>
-        <Route exact path="/" component={Pets} />
+        <Route exact path='/' component={Pets} />
       </Switch>
     </div>
   </Fragment>
-)
+);
 
-export default App
+export default App;
