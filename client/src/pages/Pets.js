@@ -5,15 +5,27 @@ import PetsList from '../components/PetsList';
 import NewPetModal from '../components/NewPetModal';
 import Loader from '../components/Loader';
 
+const PETS_FIELDS = gql`
+    fragment petsField on Pet {
+        id
+        type
+        name
+        img
+        vaccinated @client
+        owner {
+            id
+            age @client
+        }
+    }
+`;
+
 const ALL_PETS = gql`
     query AllPets {
         pets {
-            id
-            type
-            name
-            img
+            ...petsField
         }
     }
+    ${PETS_FIELDS}
 `;
 const CREATE_PET = gql`
     mutation CreatePet($input: NewPetInput!) {
@@ -41,10 +53,20 @@ export default function Pets() {
     const onSubmit = (input) => {
         createPet({
             variables: { input },
+            optimisticResponse: {
+                __typename: 'Mutation',
+                addPet: {
+                    __typename: 'Pet',
+                    id: 'sdfsdf',
+                    name: input.name,
+                    type: input.type,
+                    img: 'https://via.placeholder.com/300',
+                },
+            },
         });
         setModal(false);
     };
-    if (loading || newPet.loading) {
+    if (loading) {
         return <Loader />;
     }
     if (error || newPet.error) {
