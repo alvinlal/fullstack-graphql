@@ -1,4 +1,4 @@
-import { ApolloClient } from 'apollo-client'; //use apolo boost for all these
+import { ApolloClient } from 'apollo-client'; //use @apollo/client for all these
 import { InMemoryCache } from 'apollo-cache-inmemory'; //apolo packages
 import { HttpLink } from 'apollo-link-http';
 import gql from 'graphql-tag';
