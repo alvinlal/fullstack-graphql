@@ -8,6 +8,9 @@ const typeDefs = gql`
     pets(input: petInput!): [Pet]!
     pet(input: petInput!): Pet
   }
+  type Mutation {
+    newPet(input: petInput!): Pet
+  }
   input petInput {
     name: String
     type: String
@@ -20,7 +23,9 @@ const typeDefs = gql`
     id: ID!
     createdAt: String!
     name: String!
-    type: String
+    type: String!
+    img: String
+    buddies: [Pet!]
   }
 `;
 

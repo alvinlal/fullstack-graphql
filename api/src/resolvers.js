@@ -12,7 +12,11 @@ module.exports = {
       return ctx.models.Pet.findOne(input);
     },
   },
-  // Mutation: {},
+  Mutation: {
+    newPet(_, { input: pet }, ctx) {
+      return ctx.models.Pet.create(pet);
+    },
+  },
   // Pet: {
   //   img(pet) {
   //     return pet.type === "DOG"
