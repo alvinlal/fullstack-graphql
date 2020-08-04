@@ -13,6 +13,7 @@ const typeDefs = gql`
     ADDIDAS
     WOODLAND
   }
+  union footwear = sneaker | boots
 
   interface shoe {
     brand: shoeType!
@@ -56,6 +57,12 @@ const resolvers = {
   shoe: {
     __resolveType(shoe) {
       if (shoe.sport) return "sneaker";
+      else return "boots";
+    },
+  },
+  footwear: {
+    __resolveType(footwear) {
+      if (footwear.sport) return "sneaker";
       else return "boots";
     },
   },
